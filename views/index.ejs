@@ -1,0 +1,18 @@
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="stylesheets/style.css" />
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <% if (!isAuthenticated) { %>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+            <% } else { %>
+                <li><a href="/logout">Logout</a></li>
+            <% } %>
+        </ul>
+    </nav>
+</body>
+</html>
